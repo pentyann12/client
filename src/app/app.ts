@@ -13,8 +13,10 @@ export class App {
   @ViewChild('container', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
 
-  createDynamicComponent() {
+  createDynamicComponent(top: number = 0, left: number = 0) {
     const ref = this.container.createComponent(SampleComponent);
+    ref.instance.top = top;
+    ref.instance.left = left;
     ref.instance.close.subscribe(() => ref.destroy());
   }
 }
