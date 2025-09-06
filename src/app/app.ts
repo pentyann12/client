@@ -14,6 +14,7 @@ export class App {
   container!: ViewContainerRef;
 
   createDynamicComponent() {
-    this.container.createComponent(SampleComponent);
+    const ref = this.container.createComponent(SampleComponent);
+    ref.instance.close.subscribe(() => ref.destroy());
   }
 }

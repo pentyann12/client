@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import {CdkDrag} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-sample',
-  template: `<div cdkDrag>動的コンポーネントが生成されました！</div>`,
+  template: `
+    <div cdkDrag>
+      <button (click)="close.emit()">×</button>
+      <div>動的コンポーネントが生成されました！</div>
+    </div>
+  `,
   standalone: true,
   imports: [CdkDrag],
 })
-export class SampleComponent {}
+export class SampleComponent {
+  @Output() close = new EventEmitter<void>();
+}
