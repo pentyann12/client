@@ -7,7 +7,7 @@ import { Input } from '@angular/core';
   template: `
     <div cdkDrag [cdkDragFreeDragPosition]="position" class="sample-component">
       <button (click)="close.emit()">×</button>
-      <div>動的コンポーネント</div>
+      <div>動的コンポーネント {{ idx }}</div>
     </div>
   `,
   standalone: true,
@@ -20,5 +20,6 @@ import { Input } from '@angular/core';
 })
 export class SampleComponent {
   @Input() position = { x: 0, y: 0 };
+  @Input() idx = 1;
   @Output() close = new EventEmitter<void>();
 }

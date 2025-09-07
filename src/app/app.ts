@@ -15,15 +15,18 @@ export class App {
   container!: ViewContainerRef;
 
   private componentRefs: ComponentRef<SampleComponent>[] = [];
+  private createcounter = 1;
 
   createDynamicComponent(top: number = 0, left: number = 0) {
     const ref = this.container.createComponent(SampleComponent);
     ref.instance.position = {x: left, y: top};
+    ref.instance.idx = this.createcounter;
     ref.instance.close.subscribe(() => {
       ref.destroy();
       this.componentRefs = this.componentRefs.filter(r => r !== ref);
     });
     this.componentRefs.push(ref);
+    this.createcounter++;
   }
 
   alignComponents() {
