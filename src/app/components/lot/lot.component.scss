@@ -1,0 +1,81 @@
+
+.icon-bg {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 16px;
+	margin-right: 20px;
+	box-shadow: 0 4px 16px 0 rgba(0,0,0,0.13);
+	background: #ff9800; /* デフォルト色。ngStyleで上書き可 */
+	line-height: 1;
+}
+
+.icon-white {
+	color: #fff !important;
+	font-size: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	margin: 0;
+}
+.mat-card-header {
+	margin-bottom: 32px;
+}
+
+.mat-card-title {
+	font-size: 2.1rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+}
+
+
+.dl-list-row {
+	display: flex;
+	gap: 4vw;
+	justify-content: space-between;
+	margin: 3vw 0 2vw 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.dl-card {
+	max-width: 1200px;
+	margin: 3vw auto 0 auto;
+	padding: 1vw;
+	box-sizing: border-box;
+	width: 95vw;
+}
+
+.material-dl {
+	margin: 0;
+	min-width: 220px;
+	flex: 1 1 0;
+	max-width: 100%;
+}
+
+.dl-row {
+	display: flex;
+	align-items: baseline;
+	padding: 16px 0;
+}
+
+.dl-row.border {
+	border-bottom: 1.5px solid #e0e0e0;
+}
+
+.dl-term {
+	min-width: 100px;
+	color: #3f51b5;
+	font-weight: 500;
+	font-size: 1.08rem;
+}
+
+.dl-desc {
+	margin: 0;
+	font-size: 1.08rem;
+}

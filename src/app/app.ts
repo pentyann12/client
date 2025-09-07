@@ -2,10 +2,11 @@ import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SampleComponent } from './components/sample.component';
 import { ComponentRef } from '@angular/core';
+import { LotComponent } from './components/lot/lot.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, LotComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   standalone: true
